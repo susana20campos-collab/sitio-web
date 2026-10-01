@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestión Veterinaria SV</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    
+
+    <header class="header">
+
+        <!-- PARTE SUPERIOR -->
+
+        <div class="header-top">
+
+            <a href="#inicio" class="logo-header">
+
+                <img
+                    src="logo-veterinaria.jpeg.jpeg"
+                    alt="Logo Gestión Veterinaria SV"
+                >
+
+            </a>
+
+
+            <div class="header-tools">
+
+                <a href="#" class="mi-cuenta">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span>
+                        Mi Cuenta
+                    </span>
+
+                </a>
+
+
+                <div class="buscador-header">
+
+                    <input
+                        type="text"
+                        id="campoBuscar"
+                        placeholder="Buscar"
+                    >
+
+                    <button
+                        type="button"
+                        onclick="buscarContenido()"
+                        aria-label="Buscar"
+                    >
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="boton-emergencia"
+                    onclick="mostrarEmergencia()"
+                >
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Emergencia
+
+                </button>
+
+
+                <button
+                    class="boton-tienda"
+                    onclick="irTienda()"
+                >
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Tienda
+
+                </button>
+
+
+                <div class="redes-header">
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+
+                        <i class="fa-brands fa-tiktok"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    
+
+        <div class="header-bottom">
+
+            <button
+                class="menu-movil"
+                id="btnMenu"
+                aria-label="Abrir menú"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <nav class="menu" id="menuPrincipal">
+
+                <a href="#nosotros">
+
+                    Sobre nosotros
+
+                </a>
+
+
+                <a href="#instalaciones">
+
+                    Instalaciones
+
+                </a>
+
+
+                <div class="menu-servicios">
+
+                    <button
+                        class="servicios-boton"
+                        id="btnServicios"
+                    >
+
+                        Servicios
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div
+                        class="submenu-servicios"
+                        id="submenuServicios"
+                    >
+
+                        <a href="#servicios">
+
+                            Atención Médica y Diagnóstica
+
+                        </a>
+
+                        <a href="#servicios">
+
+                            Servicios Especializados
+
+                        </a>
+
+                        <a href="#servicios">
+
+                            Bienestar y Servicios de Apoyo
+
+                        </a>
+
+                        <a href="#primeros-auxilios">
+
+                            Primeros Auxilios
+
+                        </a>
+
+                        <a href="#emergencias">
+
+                            Emergencias
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <a href="#contacto">
+
+                    Contacto
+
+                </a>
+
+
+                <a href="#tienda">
+
+                    Tienda en Línea
+
+                </a>
+
+
+                <a href="#blog">
+
+                    Blog
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-filtro"></div>
+
+
+            <div class="hero-texto">
+
+                <span class="hero-mini">
+
+                    <i class="fa-solid fa-paw"></i>
+
+                    Cuidado profesional para tus mascotas
+
+                </span>
+
+
+                <h1>
+
+                    Cuidamos a quienes
+
+                    <span>
+                        más amas.
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    En Gestión Veterinaria SV brindamos atención
+                    profesional, responsable y llena de cariño para
+                    cuidar la salud de quienes forman parte de tu familia.
+
+                </p>
+
+
+                <div class="hero-botones">
+
+                    <button
+                        class="hero-btn-principal"
+                        onclick="mostrarMensaje()"
+                    >
+
+                        <i class="fa-regular fa-calendar-check"></i>
+
+                        Agendar cita
+
+                    </button>
+
+
+                    <a
+                        href="#servicios"
+                        class="hero-btn-secundario"
+                    >
+
+                        Ver servicios
+
+                    </a>
+
+                </div>
+
+
+                <div class="hero-datos">
+
+                    <div>
+
+                        <strong>
+                            500+
+                        </strong>
+
+                        <span>
+                            Mascotas atendidas
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            5+
+                        </strong>
+
+                        <span>
+                            Años de experiencia
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            100%
+                        </strong>
+
+                        <span>
+                            Compromiso
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+      
+
+        <section class="servicios" id="servicios">
+
+            <div class="titulo-seccion">
+
+                <span>
+                    NUESTROS SERVICIOS
+                </span>
+
+                <h2>
+
+                    Cuidamos de ellos en cada etapa
+
+                </h2>
+
+                <p>
+
+                    Contamos con servicios pensados para mantener
+                    saludables y felices a tus mascotas.
+
+                </p>
+
+            </div>
+
+
+            <div class="contenedor-servicios">
+
+                <div class="servicio">
+
+                    <div class="servicio-icono">
+
+                        <i class="fa-solid fa-stethoscope"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Consulta Veterinaria
+
+                    </h3>
+
+                    <p>
+
+                        Evaluación general para cuidar y controlar
+                        la salud de tu mascota.
+
+                    </p>
+
+                    <a href="#contacto">
+
+                        Agendar consulta
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="servicio">
+
+                    <div class="servicio-icono">
+
+                        <i class="fa-solid fa-syringe"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Vacunación
+
+                    </h3>
+
+                    <p>
+
+                        Control y aplicación de vacunas para prevenir
+                        enfermedades.
+
+                    </p>
+
+                    <a href="#contacto">
+
+                        Agendar vacuna
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="servicio">
+
+                    <div class="servicio-icono">
+
+                        <i class="fa-solid fa-paw"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Control Preventivo
+
+                    </h3>
+
+                    <p>
+
+                        Seguimiento periódico para mantener una vida
+                        saludable.
+
+                    </p>
+
+                    <a href="#contacto">
+
+                        Más información
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="servicio">
+
+                    <div class="servicio-icono">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Emergencias
+
+                    </h3>
+
+                    <p>
+
+                        Atención prioritaria para situaciones
+                        que requieren ayuda veterinaria inmediata.
+
+                    </p>
+
+                    <a href="#emergencias">
+
+                        Ver emergencias
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="instalaciones" id="instalaciones">
+
+            <div class="instalaciones-imagen">
+
+                <img
+                    src="animales.domesticos.png"
+                    alt="Instalaciones de Gestión Veterinaria SV"
+                >
+
+            </div>
+
+
+            <div class="instalaciones-contenido">
+
+                <span>
+                    NUESTRAS INSTALACIONES
+                </span>
+
+                <h2>
+
+                    Un espacio pensado para el bienestar de tu mascota
+
+                </h2>
+
+
+                <p>
+
+                    Contamos con espacios cómodos, limpios y seguros
+                    para brindar una atención profesional y responsable.
+
+                </p>
+
+
+                <div class="lista-instalaciones">
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Consultorios equipados
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Área de atención médica
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Espacios cómodos
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Atención personalizada
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#contacto"
+                    class="btn-instalaciones"
+                >
+
+                    Contactarnos
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+      
+
+        <section
+            class="primeros-auxilios"
+            id="primeros-auxilios"
+        >
+
+            <div class="titulo-seccion">
+
+                <span>
+                    PRIMEROS AUXILIOS
+                </span>
+
+                <h2>
+
+                    ¿Qué puedes hacer desde casa?
+
+                </h2>
+
+                <p>
+
+                    Algunas acciones sencillas pueden ayudar a proteger
+                    a tu mascota mientras recibe atención veterinaria.
+
+                </p>
+
+            </div>
+
+
+            <div class="contenedor-auxilios">
+
+                <div class="auxilio">
+
+                    <div class="auxilio-icono">
+                        🩸
+                    </div>
+
+                    <h3>
+                        Heridas y sangrado
+                    </h3>
+
+                    <p>
+
+                        Limpia suavemente la zona con agua limpia
+                        o solución salina y utiliza una gasa limpia
+                        para ejercer presión.
+
+                    </p>
+
+                    <span>
+
+                        No utilices alcohol directamente sobre la herida.
+
+                    </span>
+
+                </div>
+
+
+                <div class="auxilio">
+
+                    <div class="auxilio-icono">
+                        🔥
+                    </div>
+
+                    <h3>
+                        Quemaduras
+                    </h3>
+
+                    <p>
+
+                        Coloca la zona afectada bajo agua fresca
+                        durante algunos minutos.
+
+                    </p>
+
+                    <span>
+
+                        Evita aplicar hielo, cremas o medicamentos.
+
+                    </span>
+
+                </div>
+
+
+                <div class="auxilio">
+
+                    <div class="auxilio-icono">
+                        🌡️
+                    </div>
+
+                    <h3>
+                        Golpe de calor
+                    </h3>
+
+                    <p>
+
+                        Lleva a tu mascota a un lugar fresco
+                        y ofrécele pequeñas cantidades de agua.
+
+                    </p>
+
+                    <span>
+
+                        No utilices agua extremadamente fría.
+
+                    </span>
+
+                </div>
+
+
+                <div class="auxilio">
+
+                    <div class="auxilio-icono">
+                        ☠️
+                    </div>
+
+                    <h3>
+                        Posible intoxicación
+                    </h3>
+
+                    <p>
+
+                        Retira el producto o alimento que pudo
+                        provocar la intoxicación y conserva el envase.
+
+                    </p>
+
+                    <span>
+
+                        No provoques el vómito sin indicación profesional.
+
+                    </span>
+
+                </div>
+
+
+                <div class="auxilio">
+
+                    <div class="auxilio-icono">
+                        🦴
+                    </div>
+
+                    <h3>
+                        Golpes o caídas
+                    </h3>
+
+                    <p>
+
+                        Evita mover demasiado a la mascota y colócala
+                        sobre una superficie firme.
+
+                    </p>
+
+                    <span>
+
+                        Si presenta dolor intenso evita manipular la zona.
+
+                    </span>
+
+                </div>
+
+
+                <div class="auxilio">
+
+                    <div class="auxilio-icono">
+                        🐝
+                    </div>
+
+                    <h3>
+                        Picaduras
+                    </h3>
+
+                    <p>
+
+                        Aplica una compresa fría envuelta en tela
+                        para disminuir la inflamación.
+
+                    </p>
+
+                    <span>
+
+                        Si presenta dificultad para respirar busca ayuda inmediata.
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+       
+
+        <section
+            class="emergencia"
+            id="emergencias"
+        >
+
+            <div class="emergencia-icono">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+
+            <div class="emergencia-texto">
+
+                <span>
+                    ATENCIÓN IMPORTANTE
+                </span>
+
+                <h2>
+
+                    ¿Cuándo acudir inmediatamente al veterinario?
+
+                </h2>
+
+                <p>
+
+                    Si tu mascota presenta dificultad para respirar,
+                    convulsiones, pérdida del conocimiento, sangrado
+                    abundante, posible intoxicación, fracturas,
+                    vómitos repetidos o un comportamiento muy diferente
+                    al habitual, busca atención veterinaria lo antes posible.
+
+                </p>
+
+            </div>
+
+
+            <button onclick="mostrarEmergencia()">
+
+                <i class="fa-solid fa-phone"></i>
+
+                Emergencia
+
+            </button>
+
+        </section>
+
+
+       
+
+        <section
+            class="nosotros"
+            id="nosotros"
+        >
+
+            <div class="nosotros-texto">
+
+                <span>
+                    SOBRE NOSOTROS
+                </span>
+
+                <h2>
+
+                    Cuidado, confianza y compromiso
+
+                </h2>
+
+
+                <p>
+
+                    Gestión Veterinaria SV nace con el compromiso
+                    de proporcionar una atención cercana y profesional
+                    para cada mascota.
+
+                </p>
+
+
+                <p>
+
+                    Nuestro objetivo es brindar tranquilidad a sus
+                    propietarios mientras cuidamos la salud y bienestar
+                    de sus compañeros.
+
+                </p>
+
+
+                <button onclick="mostrarMensaje()">
+
+                    Agendar una cita
+
+                </button>
+
+            </div>
+
+
+            <div class="datos">
+
+                <div class="dato">
+
+                    <strong>
+                        500+
+                    </strong>
+
+                    <span>
+                        Mascotas atendidas
+                    </span>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <strong>
+                        5+
+                    </strong>
+
+                    <span>
+                        Años de experiencia
+                    </span>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <strong>
+                        100%
+                    </strong>
+
+                    <span>
+                        Compromiso
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+       
+
+        <section
+            class="tienda"
+            id="tienda"
+        >
+
+            <div class="titulo-seccion">
+
+                <span>
+                    TIENDA EN LÍNEA
+                </span>
+
+                <h2>
+
+                    Productos para el cuidado de tus mascotas
+
+                </h2>
+
+                <p>
+
+                    Próximamente encontrarás alimentos, accesorios
+                    y productos seleccionados para el bienestar
+                    de tus mascotas.
+
+                </p>
+
+            </div>
+
+
+            <div class="contenedor-productos">
+
+                <div class="producto">
+
+                    <div class="producto-icono">
+                        🐕
+                    </div>
+
+                    <h3>
+                        Alimentos
+                    </h3>
+
+                    <p>
+                        Productos seleccionados para una alimentación adecuada.
+                    </p>
+
+                </div>
+
+
+                <div class="producto">
+
+                    <div class="producto-icono">
+                        🦴
+                    </div>
+
+                    <h3>
+                        Accesorios
+                    </h3>
+
+                    <p>
+                        Artículos para entretenimiento y comodidad.
+                    </p>
+
+                </div>
+
+
+                <div class="producto">
+
+                    <div class="producto-icono">
+                        🧴
+                    </div>
+
+                    <h3>
+                        Higiene
+                    </h3>
+
+                    <p>
+                        Productos para el cuidado y limpieza de tu mascota.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+      
+
+        <section
+            class="blog"
+            id="blog"
+        >
+
+            <div class="titulo-seccion">
+
+                <span>
+                    BLOG VETERINARIO
+                </span>
+
+                <h2>
+
+                    Consejos para cuidar mejor a tu mascota
+
+                </h2>
+
+                <p>
+
+                    Información útil sobre prevención, alimentación,
+                    vacunas, higiene y bienestar animal.
+
+                </p>
+
+            </div>
+
+
+            <div class="contenedor-blog">
+
+                <article>
+
+                    <i class="fa-solid fa-shield-dog"></i>
+
+                    <h3>
+                        Prevención
+                    </h3>
+
+                    <p>
+                        La prevención ayuda a detectar problemas antes
+                        de que se conviertan en enfermedades graves.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <i class="fa-solid fa-bowl-food"></i>
+
+                    <h3>
+                        Alimentación
+                    </h3>
+
+                    <p>
+                        Una alimentación adecuada es fundamental para
+                        mantener una mascota saludable.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <i class="fa-solid fa-syringe"></i>
+
+                    <h3>
+                        Vacunas
+                    </h3>
+
+                    <p>
+                        Mantener las vacunas al día ayuda a prevenir
+                        múltiples enfermedades.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+   
+
+    <footer id="contacto">
+
+        <div class="footer-contenido">
+
+            <div class="footer-info">
+
+                <div class="footer-logo">
+
+                    <img
+                        src="logo-veterinaria.jpeg.jpeg"
+                        alt="Gestión Veterinaria SV"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Gestión Veterinaria SV
+                    </h3>
+
+                    <p>
+
+                        Cuidamos a quienes forman parte de tu familia.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-columna">
+
+                <h4>
+                    Navegación
+                </h4>
+
+                <a href="#inicio">
+                    Inicio
+                </a>
+
+                <a href="#servicios">
+                    Servicios
+                </a>
+
+                <a href="#nosotros">
+                    Nosotros
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div class="footer-columna">
+
+                <h4>
+                    Contacto
+                </h4>
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +503 0000-0000
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    veterinaria@email.com
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    El Salvador
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-columna">
+
+                <h4>
+                    Síguenos
+                </h4>
+
+                <div class="footer-redes">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Gestión Veterinaria SV.
+            Todos los derechos reservados.
+
+        </div>
+
+    </footer>
+
+
+    
+
+    <button
+        class="boton-flotante"
+        onclick="mostrarMensaje()"
+        title="Agendar cita"
+    >
+
+        <i class="fa-solid fa-calendar-check"></i>
+
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
